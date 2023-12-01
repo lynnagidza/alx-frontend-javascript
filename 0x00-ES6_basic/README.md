@@ -175,15 +175,16 @@ Don’t forget to run `npm install` from the terminal of your project folder to 
   Given what you’ve read about `var` and hoisting, modify the variables inside the function `taskBlock` so that the variables aren’t overwritten inside the conditional block.
 
   ```js
-  export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
-  if (expansion1989 === undefined) {
-    expansion1989 = 89;
+  export default function taskBlock(trueOrFalse) {
+  var task = false;
+  var task2 = true;
+
+  if (trueOrFalse) {
+    var task = true;
+    var task2 = false;
   }
 
-  if (expansion2019 === undefined) {
-    expansion2019 = 19;
-  }
-  return initialNumber + expansion1989 + expansion2019;
+  return [task, task2];
 }
   ```
 </details>
